@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random String</title>
+</head>
+
+<body>
+    <div class="random">
+        <ul></ul>
+    </div>
+    <script>
+
+        let str = "abcdefghijklmnopqrstuvewxyz1234567890",
+            strList = str.split(""),
+            randStrLen = 32,
+            randStrArr = []
+
+        function cetak(num) {
+            let pass = false;
+            
+            for (let j = 0; j < num; j++) {
+
+                let str = ""
+
+                for (let i = 0; i < randStrLen; i++) {
+                    str += strList[Math.floor(Math.random() * 37)];
+                }// generate random str
+
+                // uji str sebelum di push ke array
+                if ( is_unique(str, randStrArr) ){
+                    randStrArr.push(str)
+                }else{
+                    i--;
+                }
+
+            }
+
+            return randStrArr
+        } // end function cetak
+
+        function is_unique(str, arr = []){
+            if (randStrArr.length >= 1) {
+                    for (let k = 0; k < randStrArr.length; k++) { // uji str dengan isi seluruh array
+                        if (str !== randStrArr[k]) {
+                            return true
+                        }else{
+                            return false
+                        }
+                    } 
+                }
+
+            return true
+        }
+
+        console.log(cetak(5))
+        randStrArr.forEach(function (v) {
+            let li = "<li>" + v + "</li>"
+            document.querySelectorAll(".random ul")[0].innerHTML += li
+        })
+    </script>
+</body>
+
+</html>

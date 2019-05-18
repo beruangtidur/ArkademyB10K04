@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Char</title>
+</head>
+<body>
+    
+    <script>
+        function myCountChar(str, char){
+            let strArr = str.split(""),
+                count  = 0
+
+            for (let i = 0; i < strArr.length; i++) {
+                if (char == strArr[i]) {
+                    count++
+                }
+            }
+            return count
+        }
+
+        console.log("jumlahnya ada " +myCountChar("bootcamp", "a"))
+        console.log("jumlahnya ada " + myCountChar("bootcamp", "o"))
+        console.log("jumlahnya ada " + myCountChar("bootcamp", "x"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+html,body{ font-family: 'Kodchasan', sans-serif; }
+
+.divide{ border-bottom:1px solid lightgrey }
+.listsPrg > .row{ border-bottom:1px dashed #4E4E4E; }
+
+/* media breakpoints */
+@media (max-width: 575.98px) {
+    .newPrg-wrapper{ text-align: center; margin-top: 10px; }
+    .newPrg-wrapper > div:nth-child(2){ margin-top: 15px; }
+
+}
