@@ -1,7 +1,9 @@
 <?php
 Header('Content-type: application/json');
 
-$conn = new mysqli('127.0.0.1', 'root', 'root', 'programmer_db');
+require_once('../env.php');
+
+$conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
 
 switch ($_SERVER['REQUEST_METHOD']) {
