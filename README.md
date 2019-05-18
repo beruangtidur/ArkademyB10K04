@@ -63,8 +63,16 @@
   
   - Menghapus salah satu programmer.![5](hasil/5.png)
   
-  - Hasil akhir setelah hapus programmer.![6](hasil/6.png)
+  - Hasil akhir setelah hapus programmer.
   
+    ![6](hasil/6.png)
+  
+  - Untuk tampilan di Mobile.
+  
+    ![mobile](hasil/mobile.png)
+  
+    
+    
     ---
-  
+    
     Sekian Terima kasih
