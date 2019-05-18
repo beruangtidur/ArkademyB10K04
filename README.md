@@ -4,8 +4,8 @@
 
 ## Untuk Soal No.1
 
- - **_REST API_** adalah suatu layanan _web API_ yang dalam pembuatannya menerapakan gaya arsitektur _REST_.
- - Kegunaan _JSON_ pada _REST API_ adalah format data yang dihasilkan dari sebuah _API_ yang nantinya data _JSON_ tersebut dikonsumsi oleh pengguna _API_ tersebut .
+ - **_REST API_** adalah suatu gaya arsitektural yang didalamnya terdapat aturan-aturan tertentu untuk membuat layanan web.
+ - Kegunaan _JSON_ pada _REST API_ adalah format data yang dihasilkan dari sebuah _API_ yang nantinya data _JSON_ tersebut dikonsumsi oleh si pengguna _API_.
    
 
 ---
@@ -41,18 +41,18 @@
   ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1
   ```
 
-  ---
+**Note : ganti file env.php.sample --> env.php, isi kredensial sesuai pengaturan database anda**
 
   ## Capture Soal No.6
 
   - Tampilan Awal (Belum ada data).
-  
+
   ![1](hasil/1.png)
-  
+
   - Menambahkan nama programmer baru.
-  
+
   ![2](hasil/2.png)
-  
+
   - Menambahkan skill baru
   
     ![3](hasil/3.png)
