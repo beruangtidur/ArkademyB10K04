@@ -49,16 +49,18 @@
             data: {
                 prg_name: newPrg
             }
-        }).done(() => {
-            $('#newPrg').val("")
-            getData()
+        }).done(data => {
+            if (data) {
+                $('#newPrg').val("")
+                getData()
+            }
         })
     }
     function deletePrg(id) {
         $.ajax({
             url: 'api/crud.php?id=' + id,
             method: 'DELETE',
-        }).done((data) => {
+        }).done(data => {
             if (data) {
                 $("#forModal").modal('hide')
                 getData()
@@ -71,8 +73,10 @@
             url: 'api/crud.php?skills=' + skills + '&id=' + id,
             method: 'PATCH'
         }).done(data => {
-            $('#newSkills').val("")
-            getData()
+            if (data) {
+                $('#newSkills').val("")
+                getData()
+            }
         })
     }
     // END CRUD FUNCTION==================================================================
