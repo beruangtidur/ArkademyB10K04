@@ -27,7 +27,7 @@
             </form>
             <!-- end add new programmer  -->
 
-            <h1 style="text-decoration:underline">List Programmers</h1>
+            <h1 class="title mb-5" style="text-decoration:underline">List Programmers</h1>
             <div class="listsPrg mt-4"></div>
             <!-- end list of programmers -->
         </main>
@@ -53,52 +53,52 @@
 
     <!-- Main =========================== -->
     <script>
-                $(document).click(function (e) {
+        $(document).click(function (e) {
 
-                    if (e.target.id == "addPrg") {
-                        let newPrg = $('#newPrg').val().trim()
-                        if (newPrg !== "") {
-                            addPrg(newPrg)
-                        }
-                    }
-                    // add programmer ==================
+            if (e.target.id == "addPrg") {
+                let newPrg = $('#newPrg').val().trim()
+                if (newPrg !== "") {
+                    addPrg(newPrg)
+                }
+            }
+            // add programmer ==================
 
-                    else if (e.target.classList.contains("deletePrg")) {
-                        let id = e.target.id
-                        id = id.substring(6)
-                        
-                        $(".modal-dialog").html(`<div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modalTitle">Hapus Programmer ?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-                                <button type="button" class="btn btn-danger modalDelete" id="${id}">Hapus</button>
-                            </div>
-                        </div>`)
-                        $('.modal').modal("show");  
-                        $('.modalDelete').click(function (e) {
-                            e.preventDefault()
-                            deletePrg(e.target.id)
-                        })
-                    }
-                    // delete programmer ==================
-
-                    else if (e.target.classList.contains("addSkills")) {
-                        let id      = e.target.id.substring(6),
-                            skills  = $("#newSkills"+id).val().trim()
-
-                        if (skills !== "") {
-                            addSkills(skills, id)
-                        }
-
-                    }
-                    // add programmer skill==================
-
+            else if (e.target.classList.contains("deletePrg")) {
+                let id = e.target.id
+                id = id.substring(6)
+                
+                $(".modal-dialog").html(`<div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Hapus Programmer ?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                        <button type="button" class="btn btn-danger modalDelete" id="${id}">Hapus</button>
+                    </div>
+                </div>`)
+                $('.modal').modal("show");  
+                $('.modalDelete').click(function (e) {
+                    e.preventDefault()
+                    deletePrg(e.target.id)
                 })
+            }
+            // delete programmer ==================
+
+            else if (e.target.classList.contains("addSkills")) {
+                let id      = e.target.id.substring(6),
+                    skills  = $("#newSkills"+id).val().trim()
+
+                if (skills !== "") {
+                    addSkills(skills, id)
+                }
+
+            }
+            // add programmer skill==================
+
+        })
     </script>
 </body>
 </html>
