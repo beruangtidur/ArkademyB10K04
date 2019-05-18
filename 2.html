@@ -20,7 +20,8 @@
             randStrArr = []
 
         function cetak(num) {
-            let pass = false;
+            let pass = false,
+                arr = []
             
             for (let j = 0; j < num; j++) {
 
@@ -31,21 +32,21 @@
                 }// generate random str
 
                 // uji str sebelum di push ke array
-                if ( is_unique(str, randStrArr) ){
-                    randStrArr.push(str)
+                if ( is_unique(str, arr) ){
+                    arr.push(str)
                 }else{
-                    i--;
+                    j--; //ulangi generate
                 }
 
             }
-
+            randStrArr = arr
             return randStrArr
         } // end function cetak
 
         function is_unique(str, arr = []){
-            if (randStrArr.length > 0) {
-                    for (let k = 0; k < randStrArr.length; k++) { // uji str dengan isi seluruh array
-                        if (str !== randStrArr[k]) {
+            if (arr.length > 0) {
+                    for (let k = 0; k < arr.length; k++) { // uji str dengan isi seluruh array
+                        if (str !== arr[k]) {
                             return true
                         }else{
                             return false
@@ -57,6 +58,8 @@
         }
 
         console.log(cetak(5))
+        console.log(cetak(10))
+
         randStrArr.forEach(function (v) {
             let li = "<li>" + v + "</li>"
             document.querySelectorAll(".random ul")[0].innerHTML += li
