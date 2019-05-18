@@ -1,12 +1,16 @@
 # Bismillah
 
+----
+
+## Untuk Soal No.1
+
  - **_REST API_** adalah suatu layanan _web API_ yang dalam pembuatannya menerapakan gaya arsitektur _REST_.
  - Kegunaan _JSON_ pada _REST API_ adalah format data yang dihasilkan dari sebuah _API_ yang nantinya data _JSON_ tersebut dikonsumsi oleh pengguna _API_ tersebut .
    
 
 ---
 
-## Setup Database Untuk Tes 6:
+## Setup Database Untuk Soal No.6:
 
 - Buat Database **programmer_db**:
 
@@ -41,18 +45,26 @@
 
   ## Capture Soal No.6
 
-  
-  
   - Tampilan Awal (Belum ada data).
   
-  ![1](hasil/1.png"1")
+  ![1](hasil/1.png)
   
   - Menambahkan nama programmer baru.
   
-  ![1](hasil/3.png"3")
+  ![2](hasil/2.png)
   
-  - Menambahkan skill baru dan programmer baru.![1](hasil/4.png"4")
+  - Menambahkan skill baru
   
-  - Menghapus salah satu programmer.![1](hasil/5.png"5")
+    ![3](hasil/3.png)
   
-  - Hasil akhir setelah hapus programmer.![1](hasil/6.png"6")
+  - Menambahkan user dan skill baru.
+  
+    ![4](hasil/4.png)
+  
+  - Menghapus salah satu programmer.![5](hasil/5.png)
+  
+  - Hasil akhir setelah hapus programmer.![6](hasil/6.png)
+  
+    ---
+  
+    Sekian Terima kasih
