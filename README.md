@@ -1,13 +1,10 @@
 # Bismillah
 
-----
-
 ## Untuk Soal No.1
 
  - **_REST API_** adalah suatu gaya arsitektural yang didalamnya terdapat aturan-aturan tertentu untuk membuat layanan web.
  - Kegunaan _JSON_ pada _REST API_ adalah format data yang dihasilkan dari sebuah _API_ yang nantinya data _JSON_ tersebut dikonsumsi oleh si pengguna _API_.
    
-
 ---
 
 ## Setup Database Untuk Soal No.6:
@@ -43,6 +40,8 @@
 
 **Note : ganti file env.php.sample --> env.php, isi kredensial sesuai pengaturan database anda**
 
+---
+
   ## Capture Soal No.6
 
   - Tampilan Awal (Belum ada data).
@@ -71,8 +70,7 @@
   
     ![mobile](hasil/mobile.png)
   
-    
-    
+        
     ---
     
     Sekian Terima kasih
