@@ -14,8 +14,8 @@
 
         function cetak_gambar(len) {
             let img = ""
-            for (let baris = 0; baris < len; baris++) {
-                for (let kol = 0; kol < len; kol++) {
+            for (let baris = 0; baris < len; baris++) { // row
+                for (let kol = 0; kol < len; kol++) { // column
 
                     if (kol == baris) {
                         img += "x "
@@ -24,11 +24,13 @@
                     } else {
                         img += "= "
                     }
-                }// kolom
+                    
+                }// end column
                 img += "\n"
-            } // baris
+            } // end row
             return img
         }
+
         console.log(cetak_gambar(5))
         console.log(cetak_gambar(10))
 
