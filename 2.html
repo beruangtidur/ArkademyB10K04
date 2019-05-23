@@ -14,21 +14,21 @@
     </div>
     <script>
 
-        let str = "abcdefghijklmnopqrstuvewxyz1234567890",
-            strList = str.split(""),
-            randStrLen = 32,
-            randStrArr = []
-
+        let strList = "abcdefghijklmnopqrstuvwxyz1234567890",
+            strMaxChar = 32,
+            strArr = []
+        
         function cetak(num) {
             let pass = false,
-                arr = []
+                arr = [],
+                str
             
             for (let j = 0; j < num; j++) {
 
-                let str = ""
+                str = ""
 
-                for (let i = 0; i < randStrLen; i++) {
-                    str += strList[Math.floor(Math.random() * 37)];
+                for (let i = 0; i < strMaxChar; i++) {
+                    str += strList[Math.floor(Math.random() * strList.length)];
                 }// generate random str
 
                 // uji str sebelum di push ke array
@@ -39,8 +39,8 @@
                 }
 
             }
-            randStrArr = arr
-            return randStrArr
+            strArr = arr
+            return strArr
         } // end function cetak
 
         function is_unique(str, arr = []){
@@ -58,9 +58,9 @@
         }
 
         console.log(cetak(5))
-        console.log(cetak(10))
+        // console.log(cetak(10))
 
-        randStrArr.forEach(function (v) {
+        strArr.forEach(function (v) {
             let li = "<li>" + v + "</li>"
             document.querySelectorAll(".random ul")[0].innerHTML += li
         })
