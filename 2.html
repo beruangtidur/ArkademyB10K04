@@ -19,12 +19,10 @@
             strArr = []
         
         function cetak(num) {
-            let pass = false,
-                arr = [],
+            let arr = [],
                 str
             
             for (let j = 0; j < num; j++) {
-
                 str = ""
 
                 for (let i = 0; i < strMaxChar; i++) {
@@ -44,21 +42,23 @@
         } // end function cetak
 
         function is_unique(str, arr = []){
+            let pass = true
+
             if (arr.length > 0) {
                     for (let k = 0; k < arr.length; k++) { // uji str dengan isi seluruh array
                         if (str !== arr[k]) {
-                            return true
+                            pass = true
                         }else{
-                            return false
+                            pass = false
                         }
                     } 
-                }
+            }
 
-            return true
+            return pass
         }
 
         console.log(cetak(5))
-        // console.log(cetak(10))
+        console.log(cetak(10))
 
         strArr.forEach(function (v) {
             let li = "<li>" + v + "</li>"
